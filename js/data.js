@@ -37,7 +37,7 @@ const DATA = {
       { type: 'location', label: '杭州 · Hangzhou' },
     ],
     about: [
-      'Apache Flink / Kubernetes 子项目 / Apache DolphinScheduler Contributor。目前在阿里云负责工作流调度核心链路与智能调优服务的开发，并参与建设 LLM 驱动的 AI 助手。',
+      'Apache Flink / Kubernetes 子项目 / Apache DolphinScheduler Contributor。目前在负责智能调优服务 以及 LLM 驱动的 AI Agent 建设，曾经负责工作流调度核心链路。',
       '同济大学硕士（计算机科学与技术，研究方向为多智能体强化学习）、本科（材料科学与工程）。长期活跃于开源社区，关注流计算、调度系统与云原生基础设施。',
     ],
     work: [
@@ -48,7 +48,7 @@ const DATA = {
         location: '杭州',
         bullets: [
           '负责云上工作流调度核心链路的开发与稳定性建设，覆盖任务编排、优先级调度与资源分配等关键环节。',
-          '负责智能调优服务建设：基于作业指标、日志、状态时间为流作业提供参数与资源配置的自动调优，降低作业失败率与资源成本。',
+          '负责智能调优服务建设：基于作业指标、日志、状态事件为流作业提供参数与资源配置的自动调优，降低作业失败率与资源成本。',
           '负责大数据平台 AI 助手建设：将自然语言问答、故障诊断与常见运维操作接入平台，缩短问题定位路径，提升用户效率。',
         ],
       },
@@ -122,7 +122,7 @@ const DATA = {
       { type: 'location', label: 'Hangzhou, China' },
     ],
     about: [
-      'Apache Flink / Kubernetes subproject / Apache DolphinScheduler contributor. Currently at Alibaba Cloud, working on the core workflow-scheduling pipeline and an intelligent tuning service, and building an LLM-powered assistant for the scheduling platform.',
+      'Apache Flink / Kubernetes subproject / Apache DolphinScheduler contributor. Currently at Alibaba Cloud, leading the intelligent tuning service and the LLM-powered AI agent initiative, having previously owned the core workflow-scheduling pipeline.',
       'Received an M.S. in Computer Science (multi-agent reinforcement learning) and a B.S. in Materials Science and Engineering, both from Tongji University. Long-term open-source contributor, focused on stream processing, scheduling systems and cloud-native infrastructure.',
     ],
     work: [
@@ -133,7 +133,7 @@ const DATA = {
         location: 'Hangzhou',
         bullets: [
           'Own the development and stability of the core workflow-scheduling pipeline on the cloud big-data platform, covering job orchestration, priority scheduling and resource allocation.',
-          'Lead the intelligent tuning service: automatically tunes parameters and resource configurations for streaming jobs based on job metrics, logs and state-transition timing, reducing job failure rates and resource cost.',
+          'Lead the intelligent tuning service: automatically tunes parameters and resource configurations for streaming jobs based on job metrics, logs and state events, reducing job failure rates and resource cost.',
           'Lead the AI assistant for the big-data platform: integrates natural-language Q&A, fault diagnosis and routine ops actions into the platform, shortening the path from symptom to root cause and improving user productivity.',
         ],
       },
