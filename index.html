@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sud0x67 — 简历 / Resume. Flink · Kubernetes · Workflow Scheduling.">
+  <title>Sud0x67 · 简历 / Resume</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- 顶部工具栏：语言切换 / 导出 PDF -->
+  <div class="toolbar" id="toolbar">
+    <div class="toolbar-inner">
+      <a class="toolbar-home" href="#top">sud0x67<span class="dot">.</span>resume</a>
+      <div class="toolbar-actions">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button id="lang-zh" type="button" data-lang="zh">中</button>
+          <button id="lang-en" type="button" data-lang="en">EN</button>
+        </div>
+        <button id="btn-pdf" type="button" class="btn-primary">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span id="btn-pdf-label">下载 PDF</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main class="page" id="page">
+    <div class="sheet" id="sheet">
+      <div class="layout">
+        <!-- 左栏：头像 / 联系方式 / 技能 / 开源身份 -->
+        <aside class="sidebar" id="sidebar"></aside>
+        <!-- 右栏：正文 -->
+        <div class="main-col" id="main-col"></div>
+      </div>
+      <footer class="footer" id="footer"></footer>
+    </div>
+  </main>
+
+  <noscript>本页面需要启用 JavaScript。/ Please enable JavaScript.</noscript>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
