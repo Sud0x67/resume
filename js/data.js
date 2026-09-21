@@ -20,7 +20,6 @@ const GITHUB_AVATAR_FALLBACK = 'https://avatars.githubusercontent.com/u/18216229
 const REPO_FALLBACK = [
   { name: 'mrvf', html_url: 'https://github.com/Sud0x67/mrvf', description: 'This is the code for paper MrMIX.', language: 'Python', stargazers_count: 6 },
   { name: 'team-aligned', html_url: 'https://github.com/Sud0x67/team-aligned', description: 'An AI productivity app that lets you communicate with your silicon-based teammates just like with humans.', language: 'TypeScript', stargazers_count: 4 },
-  { name: 'city_brain_kit', html_url: 'https://github.com/Sud0x67/city_brain_kit', description: 'Repository for KDD Cup City Brain Challenge.', language: 'Python', stargazers_count: 4 },
   { name: 'agent-patterns-lab', html_url: 'https://github.com/Sud0x67/agent-patterns-lab', description: 'Implementations of different agent patterns and mini evaluation on them.', language: 'Python', stargazers_count: 1 },
 ];
 
@@ -28,8 +27,8 @@ const DATA = {
   zh: {
     meta: {
       name: 'Sud0x67',
-      headline: '大数据平台开发工程师',
-      focus: 'Flink · Kubernetes · 工作流调度',
+      headline: '高级开发工程师',
+      focus: 'Flink · Kubernetes · 工作流调度 · AI Agent',
     },
     contact: [
       { type: 'email', label: 'jokeroller@163.com', href: 'mailto:jokeroller@163.com' },
@@ -48,30 +47,24 @@ const DATA = {
         period: '2023.05 – 至今',
         location: '杭州',
         bullets: [
-          '负责云上大规模工作流调度核心链路的开发与稳定性建设，覆盖任务编排、依赖解析、优先级调度与资源分配等关键环节。',
-          '参与智能调优服务建设：基于历史执行数据为工作流作业提供参数与资源配置的自动调优，降低作业失败率与资源成本。',
-          '参与调度平台 AI 助手建设：将自然语言问答、故障诊断与常见运维操作接入平台，缩短问题定位路径，提升用户效率。',
+          '负责云上工作流调度核心链路的开发与稳定性建设，覆盖任务编排、优先级调度与资源分配等关键环节。',
+          '负责智能调优服务建设：基于作业指标、日志、状态时间为流作业提供参数与资源配置的自动调优，降低作业失败率与资源成本。',
+          '负责大数据平台 AI 助手建设：将自然语言问答、故障诊断与常见运维操作接入平台，缩短问题定位路径，提升用户效率。',
         ],
       },
     ],
     openSource: [
-      { org: 'Apache Flink', role: 'Contributor', desc: '参与社区 issue 修复与特性讨论，关注 Runtime 与调度相关模块。' },
-      { org: 'Kubernetes 子项目', role: 'Contributor', desc: '参与 Kubernetes 子项目的代码贡献。' },
-      { org: 'Apache DolphinScheduler', role: 'Contributor', desc: '参与工作流调度相关功能的开发。' },
+      { org: 'Apache Flink', role: 'Contributor', desc: '参与社区 issue 修复与特性讨论，关注 SQL模块。' },
+      { org: 'Kubernetes 子项目', role: 'Contributor', desc: '参与 Kubernetes 子项目的代码贡献，修复k8s client java 问题 。' },
+      { org: 'Apache DolphinScheduler', role: 'Contributor', desc: '参与工作流调度相关功能的开发。' }
     ],
     research: [
       {
-        title: 'MrMIX：面向多智能体强化学习的单调值函数分解',
-        venue: '论文发表信息待补充',
-        desc: '针对多智能体强化学习中值函数分解的表征能力问题提出改进方法，算法代码已开源。',
-        link: 'https://github.com/Sud0x67/mrvf',
-      },
-      {
-        title: 'ResQMIX：基于残差结构的 QMIX 扩展',
-        venue: '论文发表信息待补充',
-        desc: '在 QMIX 框架中引入残差结构，增强部分可观测场景下联合策略的表达能力，算法代码已开源。',
-        link: 'https://github.com/Sud0x67/res_qmix',
-      },
+        title: 'Priority Over Quantity: A Self-Incentive Credit Assignment Scheme for Cooperative Multiagent Reinforcement Learning',
+        venue: 'IEEE Transactions on Computational Social Systems（2024，第 11 卷第 6 期）',
+        desc: '针对合作式多智能体强化学习中的信用分配难题，提出自激励信用分配方案，缓解部分智能体“搭便车”的问题；算法代码已开源。',
+        link: 'https://ieeexplore.ieee.org/abstract/document/10630533',
+      }
     ],
     education: [
       {
@@ -82,16 +75,16 @@ const DATA = {
       },
       {
         school: '同济大学',
-        degree: '本科 · 材料科学与工程',
+        degree: '学士 · 材料科学与工程',
         period: '2014.09 – 2018.06',
         desc: '材料科学与工程学院。',
       },
     ],
     skills: [
-      { category: '流计算与大数据', items: ['Apache Flink（Runtime / Checkpoint / 调度）', '批流一体数据管道'] },
-      { category: '云原生与调度', items: ['Kubernetes', 'Helm', '工作流调度系统设计'] },
-      { category: '编程语言', items: ['Java', 'Python', 'TypeScript'] },
-      { category: 'AI 与研究', items: ['多智能体强化学习', 'LLM Agent 应用开发'] },
+      { category: '流计算与大数据', items: ['流计算控制台', '流作业运维服务', '工作流编排'] },
+      { category: '云原生与调度', items: ['Kubernetes', '流计算', '工作流调度系统设计'] },
+      { category: '编程语言', items: ['Java', 'Python'] },
+      { category: 'AI 与研究', items: ['LLM Agent 应用开发'] },
     ],
     ui: {
       lang: 'zh',
@@ -119,8 +112,8 @@ const DATA = {
   en: {
     meta: {
       name: 'Sud0x67',
-      headline: 'Big Data Platform Engineer',
-      focus: 'Flink · Kubernetes · Workflow Scheduling',
+      headline: 'Senior Software Engineer',
+      focus: 'Flink · Kubernetes · Workflow Scheduling · AI Agent',
     },
     contact: [
       { type: 'email', label: 'jokeroller@163.com', href: 'mailto:jokeroller@163.com' },
@@ -139,29 +132,23 @@ const DATA = {
         period: '2023.05 – Present',
         location: 'Hangzhou',
         bullets: [
-          'Develop and harden the core pipeline of a large-scale cloud workflow scheduling platform, covering job orchestration, dependency resolution, priority scheduling and resource allocation.',
-          'Co-build the intelligent tuning service: automatically tunes job parameters and resource configurations based on historical execution data, reducing failure rates and resource cost.',
-          'Co-build the LLM-powered platform assistant: integrates natural-language Q&A, fault diagnosis and routine ops actions into the platform, shortening the path from symptom to root cause.',
+          'Own the development and stability of the core workflow-scheduling pipeline on the cloud big-data platform, covering job orchestration, priority scheduling and resource allocation.',
+          'Lead the intelligent tuning service: automatically tunes parameters and resource configurations for streaming jobs based on job metrics, logs and state-transition timing, reducing job failure rates and resource cost.',
+          'Lead the AI assistant for the big-data platform: integrates natural-language Q&A, fault diagnosis and routine ops actions into the platform, shortening the path from symptom to root cause and improving user productivity.',
         ],
       },
     ],
     openSource: [
-      { org: 'Apache Flink', role: 'Contributor', desc: 'Fixing issues and joining feature discussions, focused on the runtime and scheduler modules.' },
-      { org: 'Kubernetes subprojects', role: 'Contributor', desc: 'Code contributions to Kubernetes subprojects.' },
+      { org: 'Apache Flink', role: 'Contributor', desc: 'Fixing issues and joining feature discussions, focused on the SQL modules.' },
+      { org: 'Kubernetes subprojects', role: 'Contributor', desc: 'Code contributions to Kubernetes subprojects, including fixes for kubernetes-client/java.' },
       { org: 'Apache DolphinScheduler', role: 'Contributor', desc: 'Contributions to workflow-scheduling features.' },
     ],
     research: [
       {
-        title: 'MrMIX: Monotonic Value Function Factorisation for MARL',
-        venue: 'Publication venue TBD',
-        desc: 'An improved value-decomposition method for multi-agent reinforcement learning; reference code is open-sourced.',
-        link: 'https://github.com/Sud0x67/mrvf',
-      },
-      {
-        title: 'ResQMIX: A Residual-Based Extension of QMIX',
-        venue: 'Publication venue TBD',
-        desc: 'Introduces a residual structure into the QMIX framework to strengthen joint-policy expressiveness under partial observability; reference code is open-sourced.',
-        link: 'https://github.com/Sud0x67/res_qmix',
+        title: 'Priority Over Quantity: A Self-Incentive Credit Assignment Scheme for Cooperative Multiagent Reinforcement Learning',
+        venue: 'IEEE Transactions on Computational Social Systems, 2024 (vol. 11, no. 6)',
+        desc: 'Proposes a self-incentive credit assignment scheme for cooperative MARL that mitigates the free-rider (lazy-agent) problem; reference code is open-sourced.',
+        link: 'https://ieeexplore.ieee.org/abstract/document/10630533',
       },
     ],
     education: [
@@ -179,10 +166,10 @@ const DATA = {
       },
     ],
     skills: [
-      { category: 'Stream Processing & Big Data', items: ['Apache Flink (Runtime / Checkpoint / Scheduling)', 'Unified batch & streaming pipelines'] },
-      { category: 'Cloud Native & Scheduling', items: ['Kubernetes', 'Helm', 'Workflow scheduling system design'] },
-      { category: 'Programming Languages', items: ['Java', 'Python', 'TypeScript'] },
-      { category: 'AI & Research', items: ['Multi-agent reinforcement learning', 'LLM agent application development'] },
+      { category: 'Stream Processing & Big Data', items: ['Stream computing console', 'Streaming-job O&M service', 'Workflow orchestration'] },
+      { category: 'Cloud Native & Scheduling', items: ['Kubernetes', 'Stream computing', 'Workflow scheduling system design'] },
+      { category: 'Programming Languages', items: ['Java', 'Python'] },
+      { category: 'AI & Research', items: ['LLM agent application development'] },
     ],
     ui: {
       lang: 'en',
