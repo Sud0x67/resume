@@ -10,31 +10,51 @@
     {
       "name": "mrvf",
       "html_url": "https://github.com/Sud0x67/mrvf",
-      "description": "This is the code for paper MrMIX.",
+      "description": "This is the  code for paer MrMIX.",
       "language": "Python",
-      "stargazers_count": 6
+      "stargazers_count": 6,
+      "pushed_at": "2025-07-27T14:45:11Z"
     },
     {
       "name": "team-aligned",
       "html_url": "https://github.com/Sud0x67/team-aligned",
       "description": "An AI productivity app that lets you communicate with your silicon-based teammates just like with humans.",
       "language": "TypeScript",
-      "stargazers_count": 4
+      "stargazers_count": 4,
+      "pushed_at": "2026-05-10T17:47:42Z"
     },
     {
       "name": "city_brain_kit",
       "html_url": "https://github.com/Sud0x67/city_brain_kit",
-      "description": "This is a repository for KDD Cup City Brain Challenge, by which you can run the demo on your own desktop rather than a docker.",
+      "description": "This is a repository for KDD Cup City Brain Challenge , by Which you can run the demo on your own desktop. rather than a docker. ",
       "language": "Python",
-      "stargazers_count": 4
+      "stargazers_count": 4,
+      "pushed_at": "2021-05-07T08:07:57Z"
+    },
+    {
+      "name": "nowcoder_community",
+      "html_url": "https://github.com/Sud0x67/nowcoder_community",
+      "description": "一个适合入门的java web项目使用了Spring, Spring MVC, Mybatis, Redis, elastic Search 等",
+      "language": "HTML",
+      "stargazers_count": 2,
+      "pushed_at": "2022-04-10T04:04:42Z"
     },
     {
       "name": "agent-patterns-lab",
       "html_url": "https://github.com/Sud0x67/agent-patterns-lab",
-      "description": "Implementations of different agent patterns and mini evaluation on them.",
+      "description": "implements of different agent patterns and mini evaluation on them.",
       "language": "Python",
-      "stargazers_count": 1
+      "stargazers_count": 1,
+      "pushed_at": "2026-05-26T17:06:21Z"
+    },
+    {
+      "name": "Data_Structure",
+      "html_url": "https://github.com/Sud0x67/Data_Structure",
+      "description": "严蔚敏 数据结构 c语言实现版",
+      "language": "C",
+      "stargazers_count": 1,
+      "pushed_at": "2019-04-29T10:14:28Z"
     }
   ],
-  "generated_at": "2026-09-22T00:00:00Z"
+  "generated_at": "2026-09-22T15:59:51Z"
 }
