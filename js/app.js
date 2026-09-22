@@ -194,15 +194,22 @@
   /* ---------- GitHub API ---------- */
 
   async function fetchGithub() {
-    const TTL = 60 * 60 * 1000;
+    /* 1) 优先读 GitHub Actions 每日生成的静态数据（同源文件，不消耗 API 配额） */
     try {
-      const cached = JSON.parse(localStorage.getItem('gh-cache') || 'null');
-      if (cached && Date.now() - cached.ts < TTL) {
-        ghData = cached.data;
-        return;
+      const res = await fetch('data/gh.json', { cache: 'no-store' });
+      if (res.ok) {
+        const d = await res.json();
+        if (d && (d.user || d.repos)) {
+          ghData = {
+            user: d.user || null,
+            repos: (d.repos && d.repos.length) ? d.repos : REPO_FALLBACK,
+          };
+          return;
+        }
       }
-    } catch (e) { /* localStorage 不可用则直接请求 */ }
+    } catch (e) { /* 静态数据不可用，退回实时 API */ }
 
+    /* 2) 兜底：匿名直连 GitHub API（限流 60 次/小时/IP，仅作降级路径） */
     try {
       const [u, r] = await Promise.all([
         fetch(`https://api.github.com/users/${GITHUB_USER}`).then((x) => x.json()),
@@ -214,7 +221,6 @@
           .sort((a, b) => b.stargazers_count - a.stargazers_count)
           .slice(0, 6);
         ghData = { user: u, repos: repos.length ? repos : REPO_FALLBACK };
-        try { localStorage.setItem('gh-cache', JSON.stringify({ ts: Date.now(), data: ghData })); } catch (e) {}
       }
     } catch (e) {
       ghData = { user: null, repos: REPO_FALLBACK };

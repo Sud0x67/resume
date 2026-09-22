@@ -4,7 +4,7 @@
 
 - 中英双语一键切换（右上角 `中 / EN`）
 - 「下载 PDF」按钮在前端直接生成 A4 PDF（html2pdf.js）
-- 开源项目与 GitHub 统计通过 GitHub API 实时获取（1 小时本地缓存）
+- 开源项目与 GitHub 统计来自 `data/gh.json`，由 GitHub Actions 每日自动刷新（`.github/workflows/update-gh-data.yml`），访客不直接调 GitHub API，不受匿名限流影响
 
 ## 如何修改简历内容
 
@@ -36,8 +36,10 @@ python3 -m http.server 8000
 ## 结构
 
 ```
-index.html      页面骨架
-css/style.css   样式（打印/PDF 适配）
-js/data.js      简历内容（中英双语）
-js/app.js       渲染 / 语言切换 / PDF 导出 / GitHub API
+index.html                      页面骨架
+css/style.css                   样式（打印/PDF 适配）
+js/data.js                      简历内容（中英双语）
+js/app.js                       渲染 / 语言切换 / PDF 导出 / GitHub 数据加载
+data/gh.json                    GitHub 数据（Actions 每日自动刷新，也可手动跑 workflow）
+.github/workflows/update-gh-data.yml   数据刷新工作流
 ```

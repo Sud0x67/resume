@@ -1,0 +1,46 @@
+name: Update GitHub data
+
+# 每日预生成 GitHub 数据为静态 JSON，访客浏览器不再直接调 GitHub API（匿名限流 60 次/小时/IP）
+on:
+  schedule:
+    - cron: '17 2 * * *' # 每天 UTC 02:17
+  workflow_dispatch: # 支持手动触发
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch profile and repos
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          gh api users/Sud0x67 > /tmp/user.json
+          gh api 'users/Sud0x67/repos?per_page=100&sort=updated' > /tmp/repos.json
+          mkdir -p data
+          jq -s '{
+            user: (.[0] | {login, avatar_url, public_repos, followers, created_at}),
+            repos: (.[1]
+              | [ .[] | select((.fork or .archived) | not) ]
+              | sort_by(-.stargazers_count)
+              | .[0:6]
+              | map({name, html_url, description, language, stargazers_count, pushed_at})),
+            generated_at: (now | todate)
+          }' /tmp/user.json /tmp/repos.json > data/gh.json
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/gh.json
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "chore: refresh GitHub data [skip ci]"
+            git push
+          fi

@@ -1,0 +1,40 @@
+{
+  "user": {
+    "login": "Sud0x67",
+    "avatar_url": "https://avatars.githubusercontent.com/u/18216229?v=4",
+    "public_repos": 78,
+    "followers": 8,
+    "created_at": "2016-04-01T15:46:00Z"
+  },
+  "repos": [
+    {
+      "name": "mrvf",
+      "html_url": "https://github.com/Sud0x67/mrvf",
+      "description": "This is the code for paper MrMIX.",
+      "language": "Python",
+      "stargazers_count": 6
+    },
+    {
+      "name": "team-aligned",
+      "html_url": "https://github.com/Sud0x67/team-aligned",
+      "description": "An AI productivity app that lets you communicate with your silicon-based teammates just like with humans.",
+      "language": "TypeScript",
+      "stargazers_count": 4
+    },
+    {
+      "name": "city_brain_kit",
+      "html_url": "https://github.com/Sud0x67/city_brain_kit",
+      "description": "This is a repository for KDD Cup City Brain Challenge, by which you can run the demo on your own desktop rather than a docker.",
+      "language": "Python",
+      "stargazers_count": 4
+    },
+    {
+      "name": "agent-patterns-lab",
+      "html_url": "https://github.com/Sud0x67/agent-patterns-lab",
+      "description": "Implementations of different agent patterns and mini evaluation on them.",
+      "language": "Python",
+      "stargazers_count": 1
+    }
+  ],
+  "generated_at": "2026-09-22T00:00:00Z"
+}
